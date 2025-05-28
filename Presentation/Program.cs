@@ -13,6 +13,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddHttpClient("EmailService", client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["EmailService:BaseUrl"]!);
+});
 
 var app = builder.Build();
 
