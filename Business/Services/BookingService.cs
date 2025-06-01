@@ -86,6 +86,7 @@ public class BookingService(IBookingRepository bookingRepository, IHttpClientFac
                     <p>{request.PostalCode} {request.City}</p>
 
                     <p>Event: {eventDetails.Title}</p>
+                    <p>Location: {eventDetails.Location}</p>
                     <p>Date: {eventDetails.EventDate}</p>
                     <p>Ticket Quantity: {request.TicketQuantity} x (${eventDetails.Price} / ticket)</p>
                     <p>Total Price: ${totalPrice}</p>"
