@@ -17,6 +17,10 @@ builder.Services.AddHttpClient("EmailService", client =>
 {
     client.BaseAddress = new Uri(builder.Configuration["EmailService:BaseUrl"]!);
 });
+builder.Services.AddHttpClient("EventService", client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["EventService:BaseUrl"]!);
+});
 
 var app = builder.Build();
 

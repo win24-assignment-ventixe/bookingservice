@@ -50,7 +50,6 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    EventId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TicketQuantity = table.Column<int>(type: "int", nullable: false),
                     BookingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BookingCustomerId = table.Column<string>(type: "nvarchar(450)", nullable: true)
